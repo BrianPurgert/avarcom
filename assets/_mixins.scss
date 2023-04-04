@@ -1,0 +1,81 @@
+/* Media queries mixins */
+@mixin respond-to($name) {
+    $max: map-get($breakpoints, $name);
+
+    @if $max {
+        @media only screen and (max-width: $max) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin higher-than($name) {
+    $min: map-get($breakpoints, $name);
+
+    @if $min {
+        @media only screen and (min-width: $min) {
+            @content;
+        }
+    }
+
+    @else {
+        @content;
+    }
+}
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
+}
+
+@mixin hover {
+    @media (hover), (-ms-high-contrast: none), (-ms-high-contrast: active) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@mixin overflow-hidden {
+    overflow: hidden;
+    scrollbar-width: none;
+    scrollbar-gutter: unset;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@mixin overflow-scroll {
+    overflow: scroll;
+    scrollbar-width: none;
+    scrollbar-gutter: unset;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+@mixin setSize($width: auto,$height: auto) {
+    width: $width;
+    min-width: $width;
+    max-width: $width;
+    height: $height;
+    min-height: $height;
+    max-height: $height;
+}
+

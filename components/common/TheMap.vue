@@ -1,0 +1,9 @@
+<template>
+  <iframe
+    src="https://yandex.ru/map-widget/v1/?um=constructor%3A0e89918f68a809f094d596c2f071ced4edcb0539a6744528c5e8763c7ee494e5&amp;source=constructor"
+    width="100%"
+    height="800"
+    frameborder="8"
+    title="Карта"
+  ></iframe>
+</template>
