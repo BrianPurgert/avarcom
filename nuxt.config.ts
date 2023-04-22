@@ -30,7 +30,7 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: ["@nuxtjs/pwa"],
+  modules: ['@kevinmarrec/nuxt-pwa'],
 
   app: {
     pageTransition: { name: "page", mode: "out-in" },
@@ -126,24 +126,5 @@ export default defineNuxtConfig({
         },
       ],
     },
-  },
-
-  pwa: {
-    manifest: {
-      name: shortTitle,
-      lang: "ru",
-      short_name: shortTitle,
-      theme_color: "#4f46e5",
-      icons: [
-        {
-          src: "/android-chrome-512x512S                                            s       .png",
-          sizes: "512x512",
-          type: "image/png",
-        },
-      ],
-    },
-    workbox: {
-      enabled: true,
-    },
-  },
+  }
 });

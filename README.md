@@ -16,7 +16,7 @@
 
 1. находясь в папке ***frontend***
 ```bash
-pnpm run install
+pnpm install
 ```
 2. для запуска проекта
 ```bash

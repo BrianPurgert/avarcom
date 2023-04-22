@@ -6,26 +6,7 @@
       fallback="Спешим Вам на помощь"
     >
       <VideoBackground src="/videos/main.mp4" class="video">
-        <div
-          class="wrapper h-screen d-flex justify-center flex-column align-center pb-10 pl-sm-2"
-        >
-          <h1 class="text-h2">ГС Дельта - мост к получению результата.</h1>
-          <p>
-            Получите страховые выплаты с компанией Дельта - ваш надежный
-            помощник в сложных ситуациях.
-          </p>
-          <p>
-            Мы помогаем страховым компаниям и их клиентам получать быстрые и
-            справедливые выплаты, чтобы защитить их будущее.
-          </p>
-          <div class="btn" @click="scrollNext">
-            <VIcon
-              icon="mdi-chevron-double-down"
-              size="x-large"
-              class="mt-10 icon"
-            />
-          </div>
-        </div>
+
       </VideoBackground>
     </ClientOnly>
 

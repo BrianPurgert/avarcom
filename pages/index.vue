@@ -9,39 +9,20 @@
 
       <br />
 
-      <h4 class="subheading">under construction</h4>
 
-      <h5>
-        Redirect to
-        <a href="http://avarcom.ru/" style="color: red">http://avarcom.ru/</a>
-        after {{ second }}
-      </h5>
+
 
       <br />
 
-      <div style="width: 35vw">
-        <VProgressLinear height="2" :model-value="progress" reverse />
-      </div>
+
     </div>
   </VParallax>
 </template>
 
 <script setup lang="ts">
-const second: Ref<number> = ref(15);
-const progress: Ref<number> = ref(0);
 
-const timer = setInterval(() => {
-  second.value--;
-  progress.value = (100 * second.value) / 15;
-  if (second.value <= 0) {
-    clearInterval(timer);
-    return (window.location.href = "http://avarcom.ru/");
-  }
-}, 1000);
 
-onBeforeUnmount(() => {
-  clearInterval(timer);
-});
+
 
 definePageMeta({
   layout: false,
